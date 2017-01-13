@@ -48,7 +48,7 @@ a {
 	font-style: italic;
 }
 .title a:hover {
-	background-image: url("ronanhealy94.github.io/img/solid-yellow.svg");
+	background-image: url("/img/solid-yellow.svg");
 	background-size: 5% 100%;	
 	color: #1C1C1C;
 }
