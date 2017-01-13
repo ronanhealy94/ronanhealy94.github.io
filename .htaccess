@@ -9,7 +9,8 @@ AuthType Basic
 require valid-user 
 ErrorDocument 404 /404NotFound.html
 DirectoryIndex index.html       
-Redirect permanent /camerakit camerakit
+Redirect permanent /camerakit.html camerakit
 Redirect permanent /grafton.html grafton
-Redirect permanent /arcsoc.html about
+Redirect permanent /arcsoc.html arcsoc
+Redirect permanent /about.html about
 order deny,allow
