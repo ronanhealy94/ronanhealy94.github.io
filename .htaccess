@@ -1,0 +1,15 @@
+<Files ~ "^\.(htaccess|htpasswd)$">
+deny from all
+</Files>
+Options Indexes
+AuthUserFile /junk/.htpasswd
+AuthGroupFile /dev/null
+AuthName "Please enter your ID and password"
+AuthType Basic
+require valid-user 
+ErrorDocument 404 /404NotFound.html
+DirectoryIndex index.html       
+Redirect permanent /camerakit camerakit
+Redirect permanent /grafton.html grafton
+Redirect permanent /arcsoc.html about
+order deny,allow
