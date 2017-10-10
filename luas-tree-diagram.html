@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<head>
 <meta charset="UTF-8">
-  <title>Interactive Tree Diagram - Task Analysis Luas TVM</title>
 <style>
 
 .node circle {
@@ -12,16 +10,20 @@
 
 .node text {
   font: 12px sans-serif;
+    transform: rotate(20deg);
+    font-weight: 600;
+    display: block;
+    text-align: left;
 }
 
 .link {
   fill: none;
-  stroke: #ccc;
+  stroke: #d21717;
   stroke-width: 2px;
 }
 
 </style>
-</head>
+
 <body>
 
 <script src="https://d3js.org/d3.v4.min.js"></script>
@@ -44,14 +46,28 @@ var treeData =
                         "children": [
                             {"name": "Adequate balance",
                             "children": [
-                                {
-                                    "name": "Remove Leap Card",
+                                {"name": "Remove Leap Card",
                                     "children": [
                                         {"name": "Tag on"}
                                     ]
                                 }
                             ]},
-                            {"name": "Low balance"}                            
+                            {"name": "Low balance",
+                            "children": [
+                                {"name": "Preset amount"},{"name": "Cash and go","children":[
+                                    {"name":"Insert €5 Cash", "children": [
+                                        {"name": "Verify screen info", "children": [
+                                            {"name":"Select \"Top Up\"", "children":[ {"name": "Ensure successful purchase feedback", "children": [
+                                                {"name":"Remove leap card", "children": [
+                                                    {"name":"Tag on"}
+                                                
+                                            ]}
+                                            ]}
+                                            ]}
+                                        ]}
+                                    ]}
+                                ]}
+                            ]}                            
                         ]}]
             }]}
         ]
@@ -67,7 +83,7 @@ var treeData =
   };
 
 var margin = {top: 20, right: 90, bottom: 30, left: 120},
-    width = 2000 - margin.left - margin.right,
+    width = 5000 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
 var svg = d3.select("body").append("svg")
