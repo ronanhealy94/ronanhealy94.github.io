@@ -54,7 +54,7 @@ var treeData =
                             ]},
                             {"name": "Low balance",
                             "children": [
-                                {"name": "Preset amount"},{"name": "Cash and go","children":[
+                                {"name": "Cash and go","children":[
                                     {"name":"Insert €5 Cash", "children": [
                                         {"name": "Verify screen info", "children": [
                                             {"name":"Select \"Top Up\"", "children":[ {"name": "Ensure successful purchase feedback", "children": [
@@ -63,6 +63,14 @@ var treeData =
                                                 
                                             ]}
                                             ]}
+                                            ]}
+                                        ]}
+                                    ]}
+                                ]}, {"name": "Preset amount", "children":[
+                                    {"name": "Select amount", "children":[
+                                        {"name": "Verify screen info", "children": [
+                                            {"name":"Decide payment method", "children": [
+                                                {"name":"Bank card"},{"name": "Cash"}
                                             ]}
                                         ]}
                                     ]}
@@ -75,8 +83,53 @@ var treeData =
       {
         "name": "Payment withut Leap",
           "children": [
-              { "name": "Level 3" },
-              { "name": "Level 3.2"}
+              { "name": "Select machine", children: [
+                  {"name":"Flexi ticket", "children": [
+                      {"name":"Selection appropriate duration and category"}
+                  ]},{"name":"Standard ticket", "children": [
+                      {"name":"View map", "children":[
+                          {"name":"Select desired destination zone", "children":[
+                              {"name":"Adult or child ticket", "children":[
+                                  {"name":"Single or return ticket", "children":[
+                                      {"name":"Multiple travellers", "children":[
+                                          {"name":"Select \"Add more Tickets\"", "children":[
+                                              {"name":"Select total number of travellers", "children":[
+                                                  {"name":"Verify screen info", "children":[
+                                                      {"name":"Decide payment method", "children":[
+                                                          {"name":"Cash"},{"name":"Bank card", "children":[
+                                                              {"name":"Insert bank card", "children":[
+                                                                  {"name":"Successful bank card read", "children":[
+                                                                      {"name":"Enter pin after prompt","children":[
+                                                                          {"name":"Ensure successful purchase feedback", "children":[
+                                                                              {"name":"Remove bank card after prompt","children":[
+                                                                                  {"name":"Take recipt","children":[
+                                                                                      {"name":"Receive ticket"}
+                                                                                  ]},{"name":"Leave receipt", "children":[
+                                                                                      {"name":"Receive ticket"}
+                                                                                  ]}
+                                                                              ]}
+                                                                          ]}
+                                                                      ]}
+                                                                  ]},{
+                                                                      "name":"Unsuccesful bank card read", "children":[
+                                                                          {"name":"Remove bank card"}
+                                                                      ]
+                                                                  }
+                                                              ]}
+                                                          ]}
+                                                      ]}
+                                                  ]}
+                                              ]}
+                                          ]}
+                                      ]},{"name":"One traveller", "children":[
+                                          {"name":"Verify on screen info"}
+                                      ]}
+                                  ]}
+                              ]}
+                          ]}
+                      ]}
+                  ]}
+              ]}
               ]
           }
     ]
